@@ -1,4 +1,5 @@
 "use client"
+import Link from 'next/link'
 import React, { useState } from 'react'
 
 const Navbar = () => {
@@ -71,10 +72,10 @@ const Navbar = () => {
     {click && (
       <div className='md:hidden'>
         <div className='px-2 pt-2 pb-3 space-y-1 sm:px-3 justify-center'>
-            <a href="/" className='text-white block hover:bg-white hover:text-black rounded-lg p-2'>Home</a>
-            <a href="/" className='text-white block hover:bg-white hover:text-black rounded-lg p-2'>About</a>
-            <a href="/" className='text-white block hover:bg-white hover:text-black rounded-lg p-2'>Projects</a>
-            <a href="/" className='text-white block hover:bg-white hover:text-black rounded-lg p-2'>Contact</a>
+            <Link href="/" className='text-white block hover:bg-white hover:text-black rounded-lg p-2'>Home</Link>
+            <Link href={"/about"} className='text-white block hover:bg-white hover:text-black rounded-lg p-2'>About</Link>
+            <Link href={"/projects" }className='text-white block hover:bg-white hover:text-black rounded-lg p-2'>Projects</Link>
+            <Link href={"/contact"} className='text-white block hover:bg-white hover:text-black rounded-lg p-2'>Contact</Link>
         </div>
       </div>
     )}
